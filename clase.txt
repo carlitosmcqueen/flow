@@ -64,4 +64,5 @@ para enviarlo a la rama principal
 
 y me regresa al develop
 
-otra forma es estando en la rama diferente al principal hacer git commit 
+otra forma es estando en la rama diferente al principal hacer un git add y un git commit
+y pushearlo asi git push origin "nombre de la rama"
