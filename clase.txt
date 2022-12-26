@@ -1,0 +1,67 @@
+Control de versiones  
+Es una manera de registrar los cambios realizados sobre un archio o un conjunto de estos a lo largo del tiempo, permitiendo recuperar versiones especificas mas adelante 
+
+lo podemos hacer con GIT  (ramas push etc)
+
+repositorio remoto 
+
+
+tag es una version a la que ldamos cierta importancia 
+
+push: registrar los commits en un repositorio remoto 
+pull: obtener los cambios en el repositorio remoto 
+resolucion de comflictos : decidir cual es la mejor version que queremos del archivo modificado 
+branch: secuencias de commits sucesivos que conforman una ramificacion en la linea temporarl de un proyecto por defecto es master o main 
+
+merge realizar una fusion entre 2 branches 
+
+el primer comit es el origin y tambien el por defecto 
+
+con checkout hacemos un cambio de directorio 
+
+para volver a un comit anterior que existe se hace  
+con -b le decimos que lo queremos crear 
+git checkout -b "nombre del commit"
+
+
+crear un repositorio local  
+- git init 
+- git config user.name "nombre de usuario de github"
+- git config user.email "mail del usuario de github"
+
+
+en developer settings podemos crear tokens 
+
+si ya tenemos el repositorio creado (de forma local) para mandarselo a git hub solo bastara 
+con poner el https en git (el link de https de github se saca en github en code)
+
+- git remote add origin "(link de https)"
+
+entonces git add .  , git commit -m "nombredelcommit" y por ultimo 
+al final para subirlo usamos git push 
+
+
+Podemos proteger algunas ramas para que no todos puedan modificarlos la principal es el develop
+
+
+
+Cuando tengamos nuestro repositorio listo vamos a poder usar el flow 
+con 
+- git flow init 
+- escribos main en la consola
+
+elejimos el nombre del devepment 
+y despues nos piden el bombre del branch de support 
+
+nunca pushear el develop (o te comes un garron de la gran flauta)
+
+
+para crear un feacture nuevo es git flow feature start "nombre" (sin las comillas)
+
+para enviarlo a la rama principal 
+
+- git flow feature finish "nombre" (sin las comillas)
+
+y me regresa al develop
+
+otra forma es estando en la rama diferente al principal hacer git commit 
